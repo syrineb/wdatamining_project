@@ -1,0 +1,303 @@
+<html>  
+<head>
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<title>PROJET_WEB</title>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css"href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://kit.fontawesome.com/43dcc20e7a.js" crossorigin="anonymous"></script>
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+body {
+  background: none;
+  height: 100vh;
+}
+.search-box{
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+.search-input{
+  width: 100%;
+  padding: 10px;
+  border: 4px solid #111d5e;
+  border-radius:10px 0 0 10px ;
+  border-right: none;
+  outline: none;
+  font-size: 20px;
+  color: #111d5e;
+  background: white;
+}
+.search-button{
+  text-align: center;
+  height: 51px;
+  width: 40px;
+  outline: none;
+  cursor: pointer;
+  border: 4px solid #111d5e;
+  border-radius: 0 10px 10px 0 ;
+  border-left: none;
+  background: white;
+  font-size: 20px;
+  border-left: 4px solid #111d5e;
+}.container{
+  width: 21%;
+  position: absolute;
+  left: 14%;
+  top: 10%;
+  transform: translate(-50% , -50%);
+}
+
+.velo_button{
+	color: white;
+  top:20%;
+  left:3.5%;
+  width: 20.6%;
+	padding: 20px 50px;
+	border: 0;
+	overflow: hidden;
+	font-size: 18px;
+	border-radius: 3px;
+  position:absolute;
+	background: #111d5e;
+  border-color: #111d5e;
+}
+.poste_button{
+	color: white;
+  top:35%;
+  left:3.5%;
+	padding: 20px 50px;
+	border: 0;
+  width: 20.6%;
+	overflow: hidden;
+	font-size: 18px;
+	border-radius: 3px;
+  position:absolute;
+	background: #111d5e;
+  border-color: #111d5e;
+}
+.gare_button{
+	color: white;
+  top:50%;
+  left:3.5%;
+  width: 20.6%;
+	padding: 20px 50px;
+	border: 0;
+	overflow: hidden;
+	font-size: 18px;
+	border-radius: 3px;
+  position:absolute;
+	background: #111d5e;
+  border-color: #111d5e;
+}
+
+
+.velo_button:after,
+.gare_button:after,
+.poste_button:after{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,.4);
+
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.velo_button[data-direction="down"]:hover:after,
+.gare_button[data-direction="down"]:hover:after,
+.poste_button[data-direction="down"]:hover:after{
+	-webkit-transform: translate(0,100%);
+	-moz-transform: translate(0,100%);
+	-o-transform: translate(0,100%);
+	-ms-transform: translate(0,100%);
+	transform: translate(0,100%);
+  background: rgba(0,0,0,0);
+}
+
+.velo_button[data-direction="up"]:hover:after,
+.gare_button[data-direction="up"]:hover:after,
+.poste_button[data-direction="up"]:hover:after{
+	-webkit-transform: translate(0,-100%);
+	-moz-transform: translate(0,-100%);
+	-o-transform: translate(0,-100%);
+	-ms-transform: translate(0,-100%);
+	transform: translate(0,-100%);
+  background: rgba(0,0,0,0);
+}
+
+.velo_button[data-direction="right"]:hover:after,
+.gare_button[data-direction="right"]:hover:after,
+.poste_button[data-direction="right"]:hover:after{
+	-webkit-transform: translate(100%,0);
+	-moz-transform: translate(100%,0);
+	-o-transform: translate(100%,0);
+	-ms-transform: translate(100%,0);
+	transform: translate(100%,0);
+  background: rgba(0,0,0,0);
+}
+
+.velo_button[data-direction="left"]:hover:after,
+.gare_button[data-direction="left"]:hover:after,
+.poste_button[data-direction="left"]:hover:after{
+  -webkit-transform: translate(-100%,0);
+	-moz-transform: translate(-100%,0);
+	-o-transform: translate(-100%,0);
+	-ms-transform: translate(-100%,0);
+	transform: translate(-100%,0);
+  background: rgba(0,0,0,0);
+}
+
+</style>
+
+</head>
+
+<body style='margin: 0'>  
+  <div style="width: 100%; height: 100%" id="mapContainer"></div>
+<script>
+      // Initialize the platform object:
+      var platform = new H.service.Platform({
+        'apikey': 'J8N7yNH4nk8HKc2e62KdxU4kEP2IpLSR45DuwzUWhHc'
+      });
+	  
+	// Obtain the default map types from the platform object
+      var maptypes = platform.createDefaultLayers();
+      // Initialize a map:
+      var map = new H.Map(
+        document.getElementById('mapContainer'),
+        maptypes.raster.terrain.map,
+        {
+          zoom: "{{zoom}}",
+          center: { lat: "{{lat}}", lng: "{{long}}" }  
+        });
+		
+	// Enable the event system on the map instance:
+	  var mapEvents = new H.mapevents.MapEvents(map);
+	
+	// Add event listener:
+	  map.addEventListener('tap', function(evt) {
+    // Log 'tap' and 'mouse' events:
+      console.log(evt.type, evt.currentPointer.type); 
+});
+
+
+
+
+
+var marker1 = new H.map.Marker({ lat:48.953691501771097, lng: 2.2238271567350498});
+map.addObject(marker1);
+
+var marker2 = new H.map.Marker({ lat:48.951267803072398, lng: 2.2249459679972499});
+map.addObject(marker2);
+
+var marker3 = new H.map.Marker({ lat:48.950814288464898, lng: 2.2246356261177298});
+map.addObject(marker3);
+
+var marker4 = new H.map.Marker({ lat:48.961147095417402, lng: 2.2524589621564299});
+map.addObject(marker4);
+
+var marker5 = new H.map.Marker({ lat:48.941831097947301, lng: 2.25475240689088});
+map.addObject(marker);
+
+var marker6 = new H.map.Marker({ lat:48.941979120610902, lng: 2.2496481803448201});
+map.addObject(marker6);
+
+var marker7 = new H.map.Marker({ lat:48.952089619223003, lng: 2.2215436976733298});
+map.addObject(marker7);
+
+var marker8 = new H.map.Marker({ lat:48.953597709459501, lng: 2.2212776885514001});
+map.addObject(marker8);
+
+var marker9 = new H.map.Marker({ lat:48.952983266885397, lng: 2.23143927833175});
+map.addObject(marker9);
+
+var marker10 = new H.map.Marker({ lat:48.953778027585301, lng: 2.2267329892868699});
+map.addObject(marker10);
+
+var marker11 = new H.map.Marker({ lat:48.9550900739453, lng: 2.2294851245851799});
+map.addObject(marker11);
+
+var marker12 = new H.map.Marker({ lat:48.946512579162601, lng: 2.23125888045303});
+map.addObject(marker12);
+
+
+var bubble1 = new H.ui.InfoBubble({ lat:48.953691501771097, lng: 2.2238271567350498}, {content: '<b>Name : Provence , Address : MAIL STENDHAL</b>'});
+ui.addBubble(bubble1);
+
+var bubble2 = new H.ui.InfoBubble( { lat:48.951267803072398, lng: 2.2249459679972499}, {content: '<b>Name : TSP HENRI WALLON 1 , Address : ALLEE HENRI WALLON</b>'});
+ui.addBubble(bubble2);
+
+var bubble3 = new H.ui.InfoBubble({ lat:48.950814288464898, lng: 2.2246356261177298} , {content: '<b>Name : TSP HENRI WALLON 2 , Address : ALLEE HENRI WALLON</b>'});
+ui.addBubble(bubble3);
+
+var bubble4 = new H.ui.InfoBubble({ lat:48.961147095417402, lng: 2.2524589621564299} , {content: '<b>Name : TSP MARTIN LUTHER KING , Address : 25 BOULEVARD YOURI GAGARINE</b>'});
+ui.addBubble(bubble4);
+
+var bubble5 = new H.ui.InfoBubble( { lat:48.941831097947301, lng: 2.25475240689088}, {content: '<b>Name : TSP PARC DES BERGES , Address : BOULEVARD HELOISE</b>'});
+ui.addBubble(bubble5);
+
+var bubble6 = new H.ui.InfoBubble( { lat:48.941979120610902, lng: 2.2496481803448201}, {content: '<b>Name : TSP ERNEST BRAY , Address : 2-4  RUE ERNEST BRAY</b>'});
+ui.addBubble(bubble6);
+
+var bubble7 = new H.ui.InfoBubble( { lat:48.952089619223003, lng: 2.2215436976733298}, {content: '<b>Name : TSP JARDIN DE LA BERIONNE , Address : RUE DE LA BERIONNE </b>'});
+ui.addBubble(bubble7);
+
+var bubble8 = new H.ui.InfoBubble( { lat:48.953597709459501, lng: 2.2212776885514001}, {content: '<b>Name : TSP JARDIN DE LA HAIE NORMANDE , Address : ALLEE GUY DE MAUPASSANT</b>'});
+ui.addBubble(bubble8);
+
+var bubble9 = new H.ui.InfoBubble( { lat:48.952983266885397, lng: 2.23143927833175}, {content: '<b>Name : TSP PARC MAURICE AUDIN , Address : 6 ALLEE ROMAIN ROLLAND</b>'});
+ui.addBubble(bubble9);
+
+var bubble10 = new H.ui.InfoBubble({ lat:48.953778027585301, lng: 2.2267329892868699} , {content: '<b>Name : TSP PLACETTE DIDEROT , Address : PLACE DENIS DIDEROT </b>'});
+ui.addBubble(bubble10);
+
+var bubble11 = new H.ui.InfoBubble( { lat:48.9550900739453, lng: 2.2294851245851799}, {content: '<b>Name : TSP PLACETTE PAUL ELUARD , Address : ALLEE PAUL ELUARD</b>'});
+ui.addBubble(bubble11);
+
+var bubble12 = new H.ui.InfoBubble( { lat:48.946512579162601, lng: 2.23125888045303}, {content: '<b>Name : TSP SQUARE DE LA COLOMBES , Address : 2 RUE DE RETHONDES</b>'});
+ui.addBubble(bubble12);
+
+
+var ui = H.ui.UI.createDefault(map, maptypes);
+
+
+
+
+    
+</script>
+
+<div class="container">
+  <form action="/city_request" method="POST">
+    <div class="search-box">
+      <input type="text" class="search-input" name="City" placeholder="City..">
+      <button class="search-button" href='/show-city_request?submitted=true' class="search-button">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </form>
+</div>  
+
+<a href=bike_request><button class="velo_button" data-direction="down">Stations vélo  <i class="fas fa-bicycle" aria-hidden="true"></i></button></a>
+<a href=gare_request><button class="gare_button" data-direction="down">Gares  TGV  <i class="fa fa-train" aria-hidden="true"></i></button></a>
+<a href=poste_request><button class="poste_button" data-direction="down">La  Poste  <i class="fa fa-envelope" aria-hidden="true"></i></button></a>
+
+
+</body>
+</html>
