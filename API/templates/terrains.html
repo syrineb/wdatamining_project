@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-<title>PROJECT</title>
+<title>PROJET_WEB</title>
 <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"type="text/javascript" charset="utf-8"></script>
 <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"type="text/javascript" charset="utf-8"></script>
 <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
@@ -25,18 +25,22 @@
       height: 100vh;
     }
     .titre{
-      width: 100%;
+      width: fit-content;
       padding: 10px;
-      font-size: 50px;
+      font-size: 35px;
       color: #383838;
+      position: absolute;
+      top: 0;
+      right: 35%;
+      height: fit-content;
       background: white;
     }
 
     .container{
-      width: 35%;
+      width: auto;
       position: absolute;
-      left: 80%;
-      top: 2.8%;
+      left: 69%;
+      top: 2.2%;
       transform: translate(-50% , -50%);
     }
 
@@ -72,6 +76,16 @@
       border-color: #111d5e;
     }
 
+    .home_button{
+      background: #111d5e;
+      border-color: #111d5e;
+      top: 0;
+      right: 0;
+      margin-top: 0px;
+      margin-right: 0px;
+      position: absolute;
+    }
+
     .deuxroues_button {
     	background: #111d5e;
     }
@@ -84,6 +98,7 @@
     	background: #111d5e;
       border-color: #111d5e;
     }
+
 
 
     button[data-direction="down"]:hover:after {
@@ -128,99 +143,163 @@
 
 <body style='margin: 0'>
     <a href=normal><button class="normal_button" data-direction="down">Parkings   <i class="fa fa-car" aria-hidden="true"></i></button></a>
-    <a href=deuxroues><button class="deuxroues_button" data-direction="down">Two wheeler parkings  <i class="fa fa-motorcycle" aria-hidden="true"></i></button></a>
-    <a href=terrains><button class="terrains_button" data-direction="down">Outdoor Spaces  <i class="fa fa-futbol-o" aria-hidden="true"></i></button></a>
+    <a href=deuxroues><button class="deuxroues_button" data-direction="down">Parkings 2 roues  <i class="fa fa-motorcycle" aria-hidden="true"></i></button></a>
+    <a href=terrains><button class="terrains_button" data-direction="down">Terrains  <i class="fa fa-futbol-o" aria-hidden="true"></i></button></a>
     <a href=squares><button class="squares_button" data-direction="down">Squares   <i class="fa fa-tree" aria-hidden="true"></i></button></a>
 
-<div style="width: 100%; height: 100%" id="mapContainer"></div>
+<div style="width: 100%; height: 93.5%;" id="mapContainer"></div>
 <script>
-      // Initialize the platform object:
-      var platform = new H.service.Platform({
-        'apikey': 'J8N7yNH4nk8HKc2e62KdxU4kEP2IpLSR45DuwzUWhHc'
-      });
 
-	// Obtain the default map types from the platform object
-      var maptypes = platform.createDefaultLayers();
-      // Initialize a map:
-      var map = new H.Map(
-        document.getElementById('mapContainer'),
-        maptypes.raster.terrain.map,
-        {
-          zoom: 13.6,
-          center: { lat: 48.9472096
-, lng: 2.2466847
- }
-        });
+      var data = {
+  "@context": {
+    "@vocab": "http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#",
+    "@base": "http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11/",
+    "namePlace": "namePlace",
+    "address": "address",
+    "xCoordinate": "xCoordinate",
+    "yCoordinate": "yCoordinate"
 
-	// Enable the event system on the map instance:
-	  var mapEvents = new H.mapevents.MapEvents(map);
+  },
 
-	// Add event listener:
-	  map.addEventListener('tap', function(evt) {
-    // Log 'tap' and 'mouse' events:
-      console.log(evt.type, evt.currentPointer.type);
-});
 
-	// Instantiate the default behavior, providing the mapEvents object:
-	 var behavior = new H.mapevents.Behavior(mapEvents);
+  "records": [
 
-function addMarkerToGroup(group, coordinate, html) {
-  var marker = new H.map.Marker(coordinate);
-  // add custom data to the marker
-  marker.setData(html);
-  group.addObject(marker);
+    {
+      "namePlace": "Provence",
+      "address": "MAIL STENDHAL",
+      "xCoordinate": 2.2238271567350498,
+      "yCoordinate": 48.953691501771097
+    },
+    {
+      "namePlace": "TSP HENRI WALLON 1",
+      "address": "ALLEE HENRI WALLON",
+      "xCoordinate": 2.2249459679972499,
+      "yCoordinate": 48.951267803072398
+    },
+    {
+      "namePlace": "TSP HENRI WALLON 2",
+      "address": "ALLEE HENRI WALLON",
+      "xCoordinate": 2.2246356261177298,
+      "yCoordinate": 48.950814288464898
+    },
+    {
+      "namePlace": "TSP MARTIN LUTHER KING",
+      "address": "25 BOULEVARD YOURI GAGARINE",
+      "xCoordinate": 2.2524589621564299,
+      "yCoordinate": 48.961147095417402
+    },
+    {
+      "namePlace": "TSP PARC DES BERGES",
+      "address": "BOULEVARD HELOISE",
+      "xCoordinate": 2.25475240689088,
+      "yCoordinate": 48.941831097947301
+    },
+    {
+      "namePlace": "TSP ERNEST BRAY",
+      "address": "2-4  RUE ERNEST BRAY",
+      "xCoordinate": 2.2496481803448201,
+      "yCoordinate": 48.941979120610902
+    },
+    {
+      "namePlace": "TSP JARDIN DE LA BERIONNE",
+      "address": "RUE DE LA BERIONNE",
+      "xCoordinate": 2.2215436976733298,
+      "yCoordinate": 48.952089619223003
+    },
+    {
+      "namePlace": "TSP JARDIN DE LA HAIE NORMANDE",
+      "address": "ALLEE GUY DE MAUPASSANT",
+      "xCoordinate": 2.2212776885514001,
+      "yCoordinate": 48.953597709459501
+    },
+    {
+      "namePlace": "TSP PARC MAURICE AUDIN",
+      "address": "6 ALLEE ROMAIN ROLLAND",
+      "xCoordinate": 2.23143927833175,
+      "yCoordinate": 48.952983266885397
+    },
+    {
+      "namePlace": "TSP PLACETTE DIDEROT",
+      "address": "PLACE DENIS DIDEROT",
+      "xCoordinate": 2.2267329892868699,
+      "yCoordinate": 48.953778027585301
+    },
+    {
+      "namePlace": "TSP PLACETTE PAUL ELUARD",
+      "address": "ALLEE PAUL ELUARD",
+      "xCoordinate": 2.2294851245851799,
+      "yCoordinate": 48.9550900739453
+    },
+    {
+      "namePlace": "TSP SQUARE DE LA COLOMBES",
+      "address": "2 RUE DE RETHONDES",
+      "xCoordinate": 2.23125888045303,
+      "yCoordinate": 48.946512579162601
+    }
+
+  ]
 }
 
-function addInfoBubble(map,name,lati, long, address) {
-  var group = new H.map.Group();
+       // Initialize the platform object:
+      const platform = new H.service.Platform({
+        'apikey': 'J8N7yNH4nk8HKc2e62KdxU4kEP2IpLSR45DuwzUWhHc'
+      });
+    	// Obtain the default map types from the platform object
+      const defaultMapLayers = platform.createDefaultLayers();
+      // Initialize a map:
+      const map = new H.Map(
+        document.getElementById('mapContainer'),
+        defaultMapLayers.raster.terrain.map,
+        {
+          zoom: 13.6,
+          center: { lat: 48.9472096, lng: 2.2466847 }
+        });
 
-  map.addObject(group);
+      // Enable the event system on the map instance:
+      const mapEvents = new H.mapevents.MapEvents(map);
+      const behavior = new H.mapevents.Behavior(mapEvents);
+      const ui = H.ui.UI.createDefault(map, defaultMapLayers);
 
-  // add 'tap' event listener, that opens info bubble, to the group
-  group.addEventListener('tap', function (evt) {
-    // event target is the marker itself, group is a parent event target
-    // for all objects that it contains
-    var bubble = new H.ui.InfoBubble(evt.target.getGeometry(), {
-      // read custom data
-      content: evt.target.getData()
-    });
-    // show info bubble
-    ui.addBubble(bubble);
-  }, false);
+      function addMarkerToGroup(group, coordinate, html)
+      {
+        var marker = new H.map.Marker(coordinate);
+        marker.setData(html);
+        group.addObject(marker);
+      }
 
-  addMarkerToGroup(group, {lat: lati, lng: long},
-    `<div>Name:<a><b>${name}</b></a></div>` +
-    `<div>Address:<br /><b>${address}</b></div>`);
+      function evt (evt)
+      {
+        var bubble = new H.ui.InfoBubble(evt.target.getGeometry(), { content: evt.target.getData() });
+        // show info bubble
+        ui.addBubble(bubble);
+      }
 
-  }
+      function addInfoBubble(map, name, lati, long, address, capacity)
+      {
+        var group = new H.map.Group();
+        map.addObject(group);
+        // add 'tap' event listener, that opens info bubble, to the group
+        group.addEventListener('tap', evt, false);
 
-var ui = H.ui.UI.createDefault(map, maptypes);
+        addMarkerToGroup(group, {lat: lati, lng: long},
+        `<div>Name: <a><b>${name}</b></a></div>` +
+        `<div>Address: <br /><b>${address}</b></div>`+
+        `<div>Capacity: <a><b>${capacity}</b></a></div>`);
+      }
 
+      for (var i=0; i<data.records.length; i++)
+      {
+        addInfoBubble(map, data.records[i].namePlace, data.records[i].yCoordinate, data.records[i].xCoordinate, data.records[i].address, data.records[i].number)
+      }
 
+  </script>
+  <div>
+    <b class='titre'>ARGENTEUIL</b>
+  </div>
 
-
-addInfoBubble(map , 'TSP MAIL STENDHAL',48.9536915017711, 2.22382715673505, 'MAIL STENDHAL');
-addInfoBubble(map , 'TSP HENRI WALLON 1',48.9512678030724, 2.22494596799725, 'ALLEE HENRI WALLON');
-addInfoBubble(map , 'TSP HENRI WALLON 2',48.9508142884649, 2.22463562611773, 'ALLEE HENRI WALLON');
-addInfoBubble(map , 'TSP MARTIN LUTHER KING',48.9611470954174, 2.25245896215643, '25 BOULEVARD YOURI GAGARINE');
-addInfoBubble(map , 'TSP PARC DES BERGES',48.9418310979473, 2.25475240689088, 'BOULEVARD HELOISE');
-addInfoBubble(map , 'TSP ERNEST BRAY',48.9419791206109, 2.24964818034482, '2-4  RUE ERNEST BRAY');
-addInfoBubble(map , 'TSP JARDIN DE LA BERIONNE',48.952089619223, 2.22154369767333, 'RUE DE LA BERIONNE');
-addInfoBubble(map , 'TSP JARDIN DE LA HAIE NORMANDE',48.9535977094595, 2.2212776885514, 'ALLEE GUY DE MAUPASSANT');
-addInfoBubble(map , 'TSP PARC MAURICE AUDIN',48.9529832668854, 2.23143927833175, '6 ALLEE ROMAIN ROLLAND');
-addInfoBubble(map , 'TSP PLACETTE DIDEROT',48.9537780275853, 2.22673298928687, 'PLACE DENIS DIDEROT');
-addInfoBubble(map , 'TSP PLACETTE PAUL ELUARD',48.9550900739453, 2.22948512458518, 'ALLEE PAUL ELUARD');
-addInfoBubble(map , 'TSP SQUARE DE LA COLOMBES',48.9465125791626, 2.23125888045303, '2 RUE DE RETHONDES');
-
-
-
-
-
-</script>
-
-<div class="container">
-  <h1 class='titre'><b>ARGENTEUIL</b></h1>
-</div>
+  <div>
+    <a href="http://127.0.0.1:5002/"><button class="home_button" data-direction="down">Home   <i class="fa fa-map" aria-hidden="true"></i></button></a>
+  </div>
 
 </body>
 </html>

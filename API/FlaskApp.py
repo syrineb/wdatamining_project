@@ -1,7 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
-import numpy as np
-import pickle as p
-import json
+
 
 app=Flask(__name__)
 
@@ -25,6 +23,6 @@ def index4():
 def index5():
 	return render_template('terrains.html')
 
-    
+
 if __name__ == "__main__":
     app.run(port=5002, debug=True, threaded=True)

@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-<title>PROJECT</title>
+<title>PROJET_WEB</title>
 <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"type="text/javascript" charset="utf-8"></script>
 <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"type="text/javascript" charset="utf-8"></script>
 <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
@@ -20,29 +20,34 @@
 <style>
     @import url("https://fonts.googleapis.com/css?family=Crimson+Text&display=swap");
     @import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
-
     body {
       background: white;
       height: 100vh;
     }
     .titre{
-      width: 100%;
+      width: fit-content;
       padding: 10px;
-      font-size: 50px;
+      font-size: 35px;
       color: #383838;
+      position: absolute;
+      top: 0;
+      right: 35%;
+      height: fit-content;
       background: white;
-    }
-    .weatherWidget{
-      left: 2%;
-      top: 70%;
     }
 
     .container{
-      width: 35%;
+      width: auto;
       position: absolute;
-      left: 80%;
-      top: 2.8%;
+      left: 69%;
+      top: 2.2%;
       transform: translate(-50% , -50%);
+    }
+
+    .weatherWidget{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
 
     button {
@@ -137,46 +142,49 @@
     <a href=terrains><button class="terrains_button" data-direction="down">Outdoor Spaces  <i class="fa fa-sportball" aria-hidden="true"></i></button></a>
     <a href=squares><button class="squares_button" data-direction="down">Squares   <i class="fa fa-tree" aria-hidden="true"></i></button></a>
 
-<div style="width: 100%; height: 100%" id="mapContainer"></div>
+<div style="width: 100%; height: 83.3%" id="mapContainer"></div>
 <script>
+      var json = 
+      [
+        {id: 48, title: "Helgelandskysten", longitude: "12.63376", latitude: "66.02219"},
+        {id: 46, title: "Tysfjord", longitude: "16.50279", latitude: "68.03515"},
+        {id: 44, title: "Sledehunds-ekspedisjon", longitude: "7.53744", latitude: "3.654"},
+        {id: 43, title: "Amundsens sydpolferd", longitude: "11.38411", latitude: "62.57481"},
+        {id: 39, title: "Vikingtokt", longitude: "6.96781", latitude: "60.96335" },
+        {id: 6, title: "Tungtvann- sabotasjen", longitude: "8.49139", latitude: "59.87111"}
+      ];
+
       // Initialize the platform object:
-      var platform = new H.service.Platform({
-        'apikey': 'J8N7yNH4nk8HKc2e62KdxU4kEP2IpLSR45DuwzUWhHc'
-      });
+      var platform = new H.service.Platform({'apikey': 'J8N7yNH4nk8HKc2e62KdxU4kEP2IpLSR45DuwzUWhHc'});
 
 	// Obtain the default map types from the platform object
       var maptypes = platform.createDefaultLayers();
       // Initialize a map:
-      var map = new H.Map(
-        document.getElementById('mapContainer'),
-        maptypes.raster.terrain.map,
-        {
-          zoom: 13.6,
-          center: { lat: 48.9472096
-, lng: 2.2466847
- }
-        });
+      var map = new H.Map(document.getElementById('mapContainer'), maptypes.raster.terrain.map, {zoom: 13.6, center: { lat: 48.9472096, lng: 2.2466847}});
 
-	// Enable the event system on the map instance:
-	  var mapEvents = new H.mapevents.MapEvents(map);
+      // Enable the event system on the map instance:
+      var mapEvents = new H.mapevents.MapEvents(map);
 
-	// Add event listener:
-	  map.addEventListener('tap', function(evt) {
-    // Log 'tap' and 'mouse' events:
-      console.log(evt.type, evt.currentPointer.type);
-});
+      // Add event listener:
+      map.addEventListener('tap', 
+      function(evt)
+      {
+        console.log(evt.type, evt.currentPointer.type);
+      }
+      );
 
-	// Instantiate the default behavior, providing the mapEvents object:
-	 var behavior = new H.mapevents.Behavior(mapEvents);
+      // Instantiate the default behavior, providing the mapEvents object:
+      var behavior = new H.mapevents.Behavior(mapEvents);
 
-
-	// Create the default UI:
-	var ui = H.ui.UI.createDefault(map, maptypes);
+      // Create the default UI:
+      var ui = H.ui.UI.createDefault(map, maptypes);
+      
+    
 
 </script>
 
-<div class="container">
-  <h1 class='titre'><b>ARGENTEUIL</b></h1>
+<div>
+  <b class='titre'>ARGENTEUIL</b>
 </div>
 
 <!-- the DIV that will contain the widget -->
