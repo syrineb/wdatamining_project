@@ -164,43 +164,12 @@
 	// Instantiate the default behavior, providing the mapEvents object:
 	 var behavior = new H.mapevents.Behavior(mapEvents);
 
-
-var marker1 = new H.map.Marker({ lat:48.953691501771097, lng: 2.2238271567350498});
-map.addObject(marker1);
-
-var marker2 = new H.map.Marker({ lat:48.951267803072398, lng: 2.2249459679972499});
-map.addObject(marker2);
-
-var marker3 = new H.map.Marker({ lat:48.950814288464898, lng: 2.2246356261177298});
-map.addObject(marker3);
-
-var marker4 = new H.map.Marker({ lat:48.961147095417402, lng: 2.2524589621564299});
-map.addObject(marker4);
-
-var marker5 = new H.map.Marker({ lat:48.941831097947301, lng: 2.25475240689088});
-map.addObject(marker5);
-
-var marker6 = new H.map.Marker({ lat:48.941979120610902, lng: 2.2496481803448201});
-map.addObject(marker6);
-
-var marker7 = new H.map.Marker({ lat:48.952089619223003, lng: 2.2215436976733298});
-map.addObject(marker7);
-
-var marker8 = new H.map.Marker({ lat:48.953597709459501, lng: 2.2212776885514001});
-map.addObject(marker8);
-
-var marker9 = new H.map.Marker({ lat:48.952983266885397, lng: 2.23143927833175});
-map.addObject(marker9);
-
-var marker10 = new H.map.Marker({ lat:48.953778027585301, lng: 2.2267329892868699});
-map.addObject(marker10);
-
-var marker11 = new H.map.Marker({ lat:48.9550900739453, lng: 2.2294851245851799});
-map.addObject(marker11);
-
-var marker12 = new H.map.Marker({ lat:48.946512579162601, lng: 2.23125888045303});
-map.addObject(marker12);
-
+function addMarkerToGroup(group, coordinate, html) {
+  var marker = new H.map.Marker(coordinate);
+  // add custom data to the marker
+  marker.setData(html);
+  group.addObject(marker);
+}
 
 function addInfoBubble(map,name,lati, long, address) {
   var group = new H.map.Group();
@@ -220,49 +189,28 @@ function addInfoBubble(map,name,lati, long, address) {
   }, false);
 
   addMarkerToGroup(group, {lat: lati, lng: long},
-    `<div><a>${name}</a></div>` +
-    `<div>City of Manchester Stadium<br />Addres:${address}</div>`);
+    `<div>Name:<a><b>${name}</b></a></div>` +
+    `<div>Address:<br /><b>${address}</b></div>`);
 
   }
 
 var ui = H.ui.UI.createDefault(map, maptypes);
-var bubble1 = new H.ui.InfoBubble({ lat:48.953691501771097, lng: 2.2238271567350498}, {content: '<b>Name : Provence , Address : MAIL STENDHAL</b>'});
-ui.addBubble(bubble1);
-
-var bubble2 = new H.ui.InfoBubble( { lat:48.951267803072398, lng: 2.2249459679972499}, {content: '<b>Name : TSP HENRI WALLON 1 , Address : ALLEE HENRI WALLON</b>'});
-ui.addBubble(bubble2);
-
-var bubble3 = new H.ui.InfoBubble({ lat:48.950814288464898, lng: 2.2246356261177298} , {content: '<b>Name : TSP HENRI WALLON 2 , Address : ALLEE HENRI WALLON</b>'});
-ui.addBubble(bubble3);
-
-var bubble4 = new H.ui.InfoBubble({ lat:48.961147095417402, lng: 2.2524589621564299} , {content: '<b>Name : TSP MARTIN LUTHER KING , Address : 25 BOULEVARD YOURI GAGARINE</b>'});
-ui.addBubble(bubble4);
-
-var bubble5 = new H.ui.InfoBubble( { lat:48.941831097947301, lng: 2.25475240689088}, {content: '<b>Name : TSP PARC DES BERGES , Address : BOULEVARD HELOISE</b>'});
-ui.addBubble(bubble5);
-
-var bubble6 = new H.ui.InfoBubble( { lat:48.941979120610902, lng: 2.2496481803448201}, {content: '<b>Name : TSP ERNEST BRAY , Address : 2-4  RUE ERNEST BRAY</b>'});
-ui.addBubble(bubble6);
-
-var bubble7 = new H.ui.InfoBubble( { lat:48.952089619223003, lng: 2.2215436976733298}, {content: '<b>Name : TSP JARDIN DE LA BERIONNE , Address : RUE DE LA BERIONNE </b>'});
-ui.addBubble(bubble7);
-
-var bubble8 = new H.ui.InfoBubble( { lat:48.953597709459501, lng: 2.2212776885514001}, {content: '<b>Name : TSP JARDIN DE LA HAIE NORMANDE , Address : ALLEE GUY DE MAUPASSANT</b>'});
-ui.addBubble(bubble8);
-
-var bubble9 = new H.ui.InfoBubble( { lat:48.952983266885397, lng: 2.23143927833175}, {content: '<b>Name : TSP PARC MAURICE AUDIN , Address : 6 ALLEE ROMAIN ROLLAND</b>'});
-ui.addBubble(bubble9);
-
-var bubble10 = new H.ui.InfoBubble({ lat:48.953778027585301, lng: 2.2267329892868699} , {content: '<b>Name : TSP PLACETTE DIDEROT , Address : PLACE DENIS DIDEROT </b>'});
-ui.addBubble(bubble10);
-
-var bubble11 = new H.ui.InfoBubble( { lat:48.9550900739453, lng: 2.2294851245851799}, {content: '<b>Name : TSP PLACETTE PAUL ELUARD , Address : ALLEE PAUL ELUARD</b>'});
-ui.addBubble(bubble11);
-
-var bubble12 = new H.ui.InfoBubble( { lat:48.946512579162601, lng: 2.23125888045303}, {content: '<b>Name : TSP SQUARE DE LA COLOMBES , Address : 2 RUE DE RETHONDES</b>'});
-ui.addBubble(bubble12);
 
 
+
+
+addInfoBubble(map , 'TSP MAIL STENDHAL',48.9536915017711, 2.22382715673505, 'MAIL STENDHAL');
+addInfoBubble(map , 'TSP HENRI WALLON 1',48.9512678030724, 2.22494596799725, 'ALLEE HENRI WALLON');
+addInfoBubble(map , 'TSP HENRI WALLON 2',48.9508142884649, 2.22463562611773, 'ALLEE HENRI WALLON');
+addInfoBubble(map , 'TSP MARTIN LUTHER KING',48.9611470954174, 2.25245896215643, '25 BOULEVARD YOURI GAGARINE');
+addInfoBubble(map , 'TSP PARC DES BERGES',48.9418310979473, 2.25475240689088, 'BOULEVARD HELOISE');
+addInfoBubble(map , 'TSP ERNEST BRAY',48.9419791206109, 2.24964818034482, '2-4  RUE ERNEST BRAY');
+addInfoBubble(map , 'TSP JARDIN DE LA BERIONNE',48.952089619223, 2.22154369767333, 'RUE DE LA BERIONNE');
+addInfoBubble(map , 'TSP JARDIN DE LA HAIE NORMANDE',48.9535977094595, 2.2212776885514, 'ALLEE GUY DE MAUPASSANT');
+addInfoBubble(map , 'TSP PARC MAURICE AUDIN',48.9529832668854, 2.23143927833175, '6 ALLEE ROMAIN ROLLAND');
+addInfoBubble(map , 'TSP PLACETTE DIDEROT',48.9537780275853, 2.22673298928687, 'PLACE DENIS DIDEROT');
+addInfoBubble(map , 'TSP PLACETTE PAUL ELUARD',48.9550900739453, 2.22948512458518, 'ALLEE PAUL ELUARD');
+addInfoBubble(map , 'TSP SQUARE DE LA COLOMBES',48.9465125791626, 2.23125888045303, '2 RUE DE RETHONDES');
 
 
 

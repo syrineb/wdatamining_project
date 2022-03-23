@@ -163,224 +163,86 @@
 	// Instantiate the default behavior, providing the mapEvents object:
 	 var behavior = new H.mapevents.Behavior(mapEvents);
 
-var marker1 = new H.map.Marker({ lat:48.950947461727701, lng: 2.2291738913259});
-map.addObject(marker1);
+function addMarkerToGroup(group, coordinate, html) {
+  var marker = new H.map.Marker(coordinate);
+  // add custom data to the marker
+  marker.setData(html);
+  group.addObject(marker);
+}
 
-var marker2 = new H.map.Marker({ lat:48.9558829191716, lng: 2.2328695786776498});
-map.addObject(marker2);
+function addInfoBubble(map,name,lati, long, address) {
+  var group = new H.map.Group();
 
-var marker3 = new H.map.Marker({ lat:48.948318155300797, lng: 2.25123394654084});
-map.addObject(marker3);
+  map.addObject(group);
 
-var marker4 = new H.map.Marker({ lat:48.948318155300797, lng: 2.25123394654084});
-map.addObject(marker4);
+  // add 'tap' event listener, that opens info bubble, to the group
+  group.addEventListener('tap', function (evt) {
+    // event target is the marker itself, group is a parent event target
+    // for all objects that it contains
+    var bubble = new H.ui.InfoBubble(evt.target.getGeometry(), {
+      // read custom data
+      content: evt.target.getData()
+    });
+    // show info bubble
+    ui.addBubble(bubble);
+  }, false);
 
-var marker5 = new H.map.Marker({ lat:48.936946917222002, lng: 2.2310428075921598});
-map.addObject(marker5);
+  addMarkerToGroup(group, {lat: lati, lng: long},
+    `<div>Name:<a><b>${name}</b></a></div>` +
+    `<div>Address:<br /><b>${address}</b></div>`);
 
-var marker6 = new H.map.Marker({ lat:48.939887951377202, lng: 2.2212942030495602});
-map.addObject(marker6);
-
-var marker7 = new H.map.Marker({ lat:48.937653060742498, lng: 2.2166409190796799});
-map.addObject(marker7);
-
-var marker8 = new H.map.Marker({ lat:48.947901368373898, lng: 2.22868483218992});
-map.addObject(marker8);
-
-var marker9 = new H.map.Marker({ lat:48.951275000195103, lng: 2.2657761641818301});
-map.addObject(marker9);
-
-var marker10 = new H.map.Marker({ lat:48.9399462589489, lng: 2.23088526146674});
-map.addObject(marker10);
-
-var marker11 = new H.map.Marker({ lat:48.951870469039001, lng: 2.2298479047787101});
-map.addObject(marker11);
-
-var marker12 = new H.map.Marker({ lat:48.953751811807301, lng: 2.2210368707029202});
-map.addObject(marker12);
-
-var marker13 = new H.map.Marker({ lat:48.954420189083102, lng: 2.2180403883353299});
-map.addObject(marker13);
-
-var marker14 = new H.map.Marker({ lat:48.946262771701399, lng: 2.2315562328543801});
-map.addObject(marker14);
-
-var marker15 = new H.map.Marker({ lat:48.947209030926103, lng: 2.23124603720888});
-map.addObject(marker15);
-
-var marker16 = new H.map.Marker({ lat:48.954926690278903, lng: 2.2284369864737199});
-map.addObject(marker16);
-
-var marker17 = new H.map.Marker({ lat:48.952552339705299, lng: 2.2886422068077001});
-map.addObject(marker17);
-
-var marker18 = new H.map.Marker({ lat:48.952552339705299, lng: 2.2487454021092601});
-map.addObject(marker18);
-
-var marker19 = new H.map.Marker({ lat:48.9417775383262, lng: 2.2480139318844299});
-map.addObject(marker19);
-
-var marker20 = new H.map.Marker({ lat:48.961409275154402, lng: 2.2541053160474198});
-map.addObject(marker20);
-
-var marker21 = new H.map.Marker({ lat:48.941575377421898, lng: 2.2456695754617901});
-map.addObject(marker21);
-
-var marker22 = new H.map.Marker({ lat:48.9352337044295, lng: 2.22463505032461});
-map.addObject(marker22);
-
-var marker23 = new H.map.Marker({ lat:48.9380810198189, lng: 2.22419124768849});
-map.addObject(marker23);
-var marker24 = new H.map.Marker({ lat:48.9407582958765, lng: 2.2512328601817});
-map.addObject(marker24);
-var marker25 = new H.map.Marker({ lat:48.9402473429899, lng: 2.24779773538339});
-map.addObject(marker25);
-var marker26 = new H.map.Marker({ lat:48.9522288475946, lng: 2.24332944775163});
-map.addObject(marker26);
-var marker27 = new H.map.Marker({ lat:48.9352640987273, lng: 2.22802887914079});
-map.addObject(marker27);
-var marker28 = new H.map.Marker({ lat:48.9523187343884, lng: 2.22088477019472});
-map.addObject(marker28);
-var marker29 = new H.map.Marker({ lat:48.9422594707231, lng: 2.25487889038858});
-map.addObject(marker29);
-var marker30 = new H.map.Marker({ lat:48.95639964263, lng: 2.22089790674634});
-map.addObject(marker30);
-var marker31 = new H.map.Marker({ lat:48.9426749901526, lng: 2.24677892876612});
-map.addObject(marker31);
-var marker32 = new H.map.Marker({ lat:48.9433083131475, lng: 2.20788653520234});
-map.addObject(marker32);
-var marker33 = new H.map.Marker({ lat:48.9485942602572, lng: 2.23045841543519});
-map.addObject(marker33);
-var marker34 = new H.map.Marker({ lat:48.9460997509991, lng: 2.2266436727285});
-map.addObject(marker34);
-var marker35 = new H.map.Marker({ lat:48.9420867934186, lng: 2.25198125113025});
-map.addObject(marker35);
-var marker36 = new H.map.Marker({ lat:48.9512159501136, lng: 2.28512287916603});
-map.addObject(marker36);
-var marker37 = new H.map.Marker({ lat:48.9536521356427, lng: 2.22348591695218});
-map.addObject(marker37);
-var marker38 = new H.map.Marker({ lat:48.9604741244956, lng: 2.2569254940622});
-map.addObject(marker38);
-var marker39 = new H.map.Marker({ lat:48.9385349268962, lng: 2.24783440064034});
-map.addObject(marker39);
-var marker40 = new H.map.Marker({ lat:48.9522332400554, lng: 2.23163015883898});
-map.addObject(marker40);
-var marker41 = new H.map.Marker({ lat:48.9517866358891, lng: 2.22326630069343});
-map.addObject(marker41);
-var marker42 = new H.map.Marker({ lat:48.951122902587, lng: 2.22476847870439});
-map.addObject(marker42);
-var marker43 = new H.map.Marker({ lat:48.9540350782567, lng: 2.22572693926107});
-map.addObject(marker43);
-var marker44 = new H.map.Marker({ lat:48.9546263583233, lng: 2.22529329399692});
-map.addObject(marker44);
-var marker45 = new H.map.Marker({ lat:48.9538373090237, lng: 2.28873342569732});
-map.addObject(marker45);
-var marker46 = new H.map.Marker({ lat:48.9534320808123, lng: 2.22594392043679});
-map.addObject(marker46);
-var marker47 = new H.map.Marker({ lat:48.9540471806066, lng: 2.22823804042367});
-map.addObject(marker47);
-var marker48 = new H.map.Marker({ lat:48.9519092564743, lng: 2.22723677205632});
-map.addObject(marker48);
-
-
+  }
 var ui = H.ui.UI.createDefault(map, maptypes);
-var bubble1 = new H.ui.InfoBubble({ lat:48.9509474617277, lng: 2.2291738913259}, {content: '<b>Name : Square Fernand Leger, Address : Allée Fernand Léger</b>'});
-ui.addBubble(bubble1);
-var bubble2 = new H.ui.InfoBubble({ lat:48.9558829191716, lng: 2.23286957867765}, {content: '<b>Name : Square Clémenceau, Address : Rue des Celtes</b>'});
-ui.addBubble(bubble2);
-var bubble3 = new H.ui.InfoBubble({ lat:48.9517000065698, lng: 2.27455085426658}, {content: '<b>Name : Square Monmousseau, Address : Rue Gaston Monmousseau</b>'});
-ui.addBubble(bubble3);
-var bubble4 = new H.ui.InfoBubble({ lat:48.9483181553008, lng: 2.25123394654084}, {content: '<b>Name : Square Pierre Joly, Address : Place Carnot</b>'});
-ui.addBubble(bubble4);
-var bubble5 = new H.ui.InfoBubble({ lat:48.936946917222, lng: 2.23104280759216}, {content: '<b>Name : Square du Cinq Mars, Address : Avenue du Cinq Mars</b>'});
-ui.addBubble(bubble5);
-var bubble6 = new H.ui.InfoBubble({ lat:48.9398879513772, lng: 2.22129420304956}, {content: "<b>Name : Square de l'Union, Address : Rue de l'Union</b>"});
-ui.addBubble(bubble6);
-var bubble7 = new H.ui.InfoBubble({ lat:48.9376530607425, lng: 2.21664091907968}, {content: '<b>Name : Square Camélinat, Address : Rue de la Justice</b>'});
-ui.addBubble(bubble7);
-var bubble8 = new H.ui.InfoBubble({ lat:48.9479013683739, lng: 2.22868483218992}, {content: '<b>Name : Jardin pédagogique du Poirier Fourrier, Address : Rue du Poirier Fourrier</b>'});
-ui.addBubble(bubble8);
-var bubble9 = new H.ui.InfoBubble({ lat:48.9512750001951, lng: 2.26577616418183}, {content: '<b>Name : Square Jules Ferry, Address : Boulevard Jules Ferry</b>'});
-ui.addBubble(bubble9);
-var bubble10 = new H.ui.InfoBubble({ lat:48.9399462589489, lng: 2.23088526146674}, {content: '<b>Name : Square Caillebotte, Address : Rue Gustave Caillebotte</b>'});
-ui.addBubble(bubble10);
-var bubble11 = new H.ui.InfoBubble({ lat:48.951870469039, lng: 2.22984790477871}, {content: '<b>Name : Allée Soulezard, Address : Allée Soulezard</b>'});
-ui.addBubble(bubble11);
-var bubble12 = new H.ui.InfoBubble({ lat:48.9537518118073, lng: 2.22103687070292}, {content: '<b>Name : Jardin de la Haie Normande, Address : Allée de la Haie Normande</b>'});
-ui.addBubble(bubble12);
-var bubble13 = new H.ui.InfoBubble({ lat:48.9544201890831, lng: 2.21804038833533}, {content: '<b>Name : Jardin des Musiciens, Address : Allée Beethoven</b>'});
-ui.addBubble(bubble13);
-var bubble14 = new H.ui.InfoBubble({ lat:48.9462627717014, lng: 2.23155623285438}, {content: '<b>Name : Square de la colombes, Address : Rue de Rethondes</b>'});
-ui.addBubble(bubble14);
-var bubble15 = new H.ui.InfoBubble({ lat:48.9472090309261, lng: 2.23124603720888}, {content: '<b>Name : Square de la Rethonde, Address : Rue du Poirier Fourrier</b>'});
-ui.addBubble(bubble15);
-var bubble16 = new H.ui.InfoBubble({ lat:48.9549266902789, lng: 2.22843698647372}, {content: '<b>Name : Espace Paul Eluard, Address : Allée Paul Eluard</b>'});
-ui.addBubble(bubble16);
-var bubble17 = new H.ui.InfoBubble({ lat:48.9525523397053, lng: 2.2886422068077}, {content: '<b>Name : Jardin des Justes, Address : Rue des Provençaux</b>'});
-ui.addBubble(bubble17);
-var bubble18 = new H.ui.InfoBubble({ lat:48.9471436460646, lng: 2.24874540210926}, {content: "<b>Name : Jardin de l'Hôtel de Ville, Address : Boulevard Léon Feix</b>"});
-ui.addBubble(bubble18);
-var bubble19 = new H.ui.InfoBubble({ lat:48.9417775383262, lng: 2.24801393188443}, {content: '<b>Name : Place Georges Braque, Address : Place Georges Braque</b>'});
-ui.addBubble(bubble19);
-var bubble20 = new H.ui.InfoBubble({ lat:48.9614092751544, lng: 2.25410531604742}, {content: '<b>Name : Piscine Youri Gagarine, Address : Rue du Nord</b>'});
-ui.addBubble(bubble20);
-var bubble21 = new H.ui.InfoBubble({ lat:48.9415753774219, lng: 2.24566957546179}, {content: "<b>Name : Jardin des impressionnistes, Address : Ruelle de l'Eglise</b>"});
-ui.addBubble(bubble21);
-var bubble22 = new H.ui.InfoBubble({ lat:48.9352337044295, lng: 2.22463505032461}, {content: '<b>Name : Square de Lorraine, Address : Place de Lorraine</b>'});
-ui.addBubble(bubble22);
-var bubble23 = new H.ui.InfoBubble({ lat:48.9380810198189, lng: 2.22419124768849}, {content: '<b>Name : Parc des Champioux, Address : Boulevard du Général Delambre</b>'});
-ui.addBubble(bubble23);
-var bubble24 = new H.ui.InfoBubble({ lat:48.9407582958765, lng: 2.2512328601817}, {content: '<b>Name : Espace Jean Vilar, Address : Boulevard Héloïse</b>'});
-ui.addBubble(bubble24);
-var bubble25 = new H.ui.InfoBubble({ lat:48.9402473429899, lng: 2.24779773538339}, {content: '<b>Name : Jardin des Saints Pères, Address : Rue du Huit Mai 1945</b>'});
-ui.addBubble(bubble25);
-var bubble26 = new H.ui.InfoBubble({ lat:48.9522288475946, lng: 2.24332944775163}, {content: '<b>Name : Square de la Flache, Address : Rue de la Flache</b>'});
-ui.addBubble(bubble26);
-var bubble27 = new H.ui.InfoBubble({ lat:48.9352640987273, lng: 2.22802887914079}, {content: '<b>Name : Parc Mirabeau, Address : Avenue du Parc</b>'});
-ui.addBubble(bubble27);
-var bubble28 = new H.ui.InfoBubble({ lat:48.9523187343884, lng: 2.22088477019472}, {content: '<b>Name : Jardin de la Bérionne, Address : Rue de la Bérionne</b>'});
-ui.addBubble(bubble28);
-var bubble29 = new H.ui.InfoBubble({ lat:48.9422594707231, lng: 2.25487889038858}, {content: '<b>Name : Parc des Berges, Address : Boulevard Héloïse</b>'});
-ui.addBubble(bubble29);
-var bubble30 = new H.ui.InfoBubble({ lat:48.95639964263, lng: 2.22089790674634}, {content: '<b>Name : Parc du cerisier, Address : Rue des Allobroges</b>'});
-ui.addBubble(bubble30);
-var bubble31 = new H.ui.InfoBubble({ lat:48.9426749901526, lng: 2.24677892876612}, {content: '<b>Name : Square des deux Abbés, Address : Rue de Calais</b>'});
-ui.addBubble(bubble31);
-var bubble32 = new H.ui.InfoBubble({ lat:48.9433083131475, lng: 2.20788653520234}, {content: '<b>Name : Square du Prunet, Address : Rue des Figuiers Blancs</b>'});
-ui.addBubble(bubble32);
-var bubble33 = new H.ui.InfoBubble({ lat:48.9485942602572, lng: 2.23045841543519}, {content: '<b>Name : Square Poirier Fourrier, Address : Rue du Poirier Fourrier</b>'});
-ui.addBubble(bubble33);
-var bubble34 = new H.ui.InfoBubble({ lat:48.9460997509991, lng: 2.2266436727285}, {content: '<b>Name : Square Locarno, Address : Square de Locarno</b>'});
-ui.addBubble(bubble34);
-var bubble35 = new H.ui.InfoBubble({ lat:48.9420867934186, lng: 2.25198125113025}, {content: '<b>Name : Square du chevalier St George, Address : Boulevard Héloïse</b>'});
-ui.addBubble(bubble35);
-var bubble36 = new H.ui.InfoBubble({ lat:48.9512159501136, lng: 2.28512287916603}, {content: '<b>Name : Côté des Larris, Address : </b>'});
-ui.addBubble(bubble36);
-var bubble37 = new H.ui.InfoBubble({ lat:48.9536521356427, lng: 2.22348591695218}, {content: '<b>Name : Mail Stendhal, Address : Mail Stendhal</b>'});
-ui.addBubble(bubble37);
-var bubble38 = new H.ui.InfoBubble({ lat:48.9604741244956, lng: 2.2569254940622}, {content: "<b>Name : Promenade Verte, Address : Avenue de l'Espace</b>"});
-ui.addBubble(bubble38);
-var bubble39 = new H.ui.InfoBubble({ lat:48.9385349268962, lng: 2.24783440064034}, {content: '<b>Name : Promenade Heloise, Address : Boulevard Héloïse</b>'});
-ui.addBubble(bubble39);
-var bubble40 = new H.ui.InfoBubble({ lat:48.9522332400554, lng: 2.23163015883898}, {content: '<b>Name : Parc Maurice Audin, Address : Allée Romain Rolland</b>'});
-ui.addBubble(bubble40);
-var bubble41 = new H.ui.InfoBubble({ lat:48.9517866358891, lng: 2.22326630069343}, {content: '<b>Name : Square Henri Wallon, Address : Allée Henri Wallon</b>'});
-ui.addBubble(bubble41);
-var bubble42 = new H.ui.InfoBubble({ lat:48.951122902587, lng: 2.22476847870439}, {content: '<b>Name : Jardin Henri Wallon, Address : Allée Henri Wallon</b>'});
 
-ui.addBubble(bubble42);
-var bubble43 = new H.ui.InfoBubble({ lat:48.9540350782567, lng: 2.22572693926107}, {content: '<b>Name : Espace Villon n°2, Address : Allée François Villon</b>'});
-ui.addBubble(bubble43);
-var bubble44 = new H.ui.InfoBubble({ lat:48.9546263583233, lng: 2.22529329399692}, {content: '<b>Name : Espace Villon square des quatre tours, Address : Allée François Villon</b>'});
-ui.addBubble(bubble44);
-var bubble45 = new H.ui.InfoBubble({ lat:48.9538373090237, lng: 2.28873342569732}, {content: '<b>Name : Place des Vosges, Address : Place des Vosges</b>'});
-ui.addBubble(bubble45);
-var bubble46 = new H.ui.InfoBubble({ lat:48.9534320808123, lng: 2.22594392043679}, {content: '<b>Name : Dalle Nord Commune de Paris, Address : Allée Ronsard</b>'});
-ui.addBubble(bubble46);
-var bubble47 = new H.ui.InfoBubble({ lat:48.9540471806066, lng: 2.22823804042367}, {content: "<b>Name : Diderot Nord, Address : Place d'Alembert</b>"});
-ui.addBubble(bubble47);
-var bubble48 = new H.ui.InfoBubble({ lat:48.9519092564743, lng: 2.22723677205632}, {content: '<b>Name : Place du Marché, Address : Allée Fernand Léger</b>'});
-ui.addBubble(bubble48);
+addInfoBubble(map , 'Square Fernand Leger',48.9509474617277, 2.2291738913259, 'Allée Fernand Léger');
+addInfoBubble(map , 'Square Clémenceau',48.9558829191716, 2.23286957867765, 'Rue des Celtes');
+addInfoBubble(map , 'Square Monmousseau',48.9517000065698, 2.27455085426658, 'Rue Gaston Monmousseau');
+addInfoBubble(map , 'Square Pierre Joly',48.9483181553008, 2.25123394654084, 'Place Carnot');
+addInfoBubble(map , 'Square du Cinq Mars',48.936946917222, 2.23104280759216, 'Avenue du Cinq Mars');
+addInfoBubble(map , 'Square de l Union',48.9398879513772, 2.22129420304956, 'Rue de l Union');
+addInfoBubble(map , 'Square Camélinat',48.9376530607425, 2.21664091907968, 'Rue de la Justice');
+addInfoBubble(map , 'Jardin pédagogique du Poirier Fourrier',48.9479013683739, 2.22868483218992, 'Rue du Poirier Fourrier');
+addInfoBubble(map , 'Square Jules Ferry',48.9512750001951, 2.26577616418183, 'Boulevard Jules Ferry');
+addInfoBubble(map , 'Square Caillebotte',48.9399462589489, 2.23088526146674, 'Rue Gustave Caillebotte');
+addInfoBubble(map , 'Allée Soulezard',48.951870469039, 2.22984790477871, 'Allée Soulezard');
+addInfoBubble(map , 'Jardin de la Haie Normande',48.9537518118073, 2.22103687070292, 'Allée de la Haie Normande');
+addInfoBubble(map , 'Jardin des Musiciens',48.9544201890831, 2.21804038833533, 'Allée Beethoven');
+addInfoBubble(map , 'Square de la colombes',48.9462627717014, 2.23155623285438, 'Rue de Rethondes');
+addInfoBubble(map , 'Square de la Rethonde',48.9472090309261, 2.23124603720888, 'Rue du Poirier Fourrier');
+addInfoBubble(map , 'Espace Paul Eluard',48.9549266902789, 2.22843698647372, 'Allée Paul Eluard');
+addInfoBubble(map , 'Jardin des Justes',48.9525523397053, 2.2886422068077, 'Rue des Provençaux');
+addInfoBubble(map , 'Jardin de l Hôtel de Ville',48.9471436460646, 2.24874540210926, 'Boulevard Léon Feix');
+addInfoBubble(map , 'Place Georges Braque',48.9417775383262, 2.24801393188443, 'Place Georges Braque');
+addInfoBubble(map , 'Piscine Youri Gagarine',48.9614092751544, 2.25410531604742, 'Rue du Nord');
+addInfoBubble(map , 'Jardin des impressionnistes',48.9415753774219, 2.24566957546179, 'Ruelle de l Eglise');
+addInfoBubble(map , 'Square de Lorraine',48.9352337044295, 2.22463505032461, 'Place de Lorraine');
+addInfoBubble(map , 'Parc des Champioux',48.9380810198189, 2.22419124768849, 'Boulevard du Général Delambre');
+addInfoBubble(map , 'Espace Jean Vilar',48.9407582958765, 2.2512328601817, 'Boulevard Héloïse');
+addInfoBubble(map , 'Jardin des Saints Pères',48.9402473429899, 2.24779773538339, 'Rue du Huit Mai 1945');
+addInfoBubble(map , 'Square de la Flache',48.9522288475946, 2.24332944775163, 'Rue de la Flache');
+addInfoBubble(map , 'Parc Mirabeau',48.9352640987273, 2.22802887914079, 'Avenue du Parc');
+addInfoBubble(map , 'Jardin de la Bérionne',48.9523187343884, 2.22088477019472, 'Rue de la Bérionne');
+addInfoBubble(map , 'Parc des Berges',48.9422594707231, 2.25487889038858, 'Boulevard Héloïse');
+addInfoBubble(map , 'Parc du cerisier',48.95639964263, 2.22089790674634, 'Rue des Allobroges');
+addInfoBubble(map , 'Square des deux Abbés',48.9426749901526, 2.24677892876612, 'Rue de Calais');
+addInfoBubble(map , 'Square du Prunet',48.9433083131475, 2.20788653520234, 'Rue des Figuiers Blancs');
+addInfoBubble(map , 'Square Poirier Fourrier',48.9485942602572, 2.23045841543519, 'Rue du Poirier Fourrier');
+addInfoBubble(map , 'Square Locarno',48.9460997509991, 2.2266436727285, 'Square de Locarno');
+addInfoBubble(map , 'Square du chevalier St George',48.9420867934186, 2.25198125113025, 'Boulevard Héloïse');
+addInfoBubble(map , 'Côté des Larris',48.9512159501136, 2.28512287916603, '');
+addInfoBubble(map , 'Mail Stendhal',48.9536521356427, 2.22348591695218, 'Mail Stendhal');
+addInfoBubble(map , 'Promenade Verte',48.9604741244956, 2.2569254940622, 'Avenue de l Espace');
+addInfoBubble(map , 'Promenade Heloise',48.9385349268962, 2.24783440064034, 'Boulevard Héloïse');
+addInfoBubble(map , 'Parc Maurice Audin',48.9522332400554, 2.23163015883898, 'Allée Romain Rolland');
+addInfoBubble(map , 'Square Henri Wallon',48.9517866358891, 2.22326630069343, 'Allée Henri Wallon');
+addInfoBubble(map , 'Jardin Henri Wallon',48.951122902587, 2.22476847870439, 'Allée Henri Wallon');
+addInfoBubble(map , 'Espace Villon n°2',48.9540350782567, 2.22572693926107, 'Allée François Villon');
+addInfoBubble(map , 'Espace Villon square des quatre tours',48.9546263583233, 2.22529329399692, 'Allée François Villon');
+addInfoBubble(map , 'Place des Vosges',48.9538373090237, 2.28873342569732, 'Place des Vosges');
+addInfoBubble(map , 'Dalle Nord Commune de Paris',48.9534320808123, 2.22594392043679, 'Allée Ronsard');
+addInfoBubble(map , 'Diderot Nord',48.9540471806066, 2.22823804042367, 'Place d Alembert');
+addInfoBubble(map , 'Place du Marché',48.9519092564743, 2.22723677205632, 'Allée Fernand Léger');
+
 
 
 

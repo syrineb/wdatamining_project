@@ -1,0 +1,439 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#">
+
+  <rdf:Description rdf:nodeID="genid1">
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée Fernand Léger</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Fernand Leger</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.2291738913259E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89509474617277E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue des Celtes</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Clémenceau</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.23286957867765E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89558829191716E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue Gaston Monmousseau</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Monmousseau</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.25123394654084E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89483181553008E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place Carnot</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Pierre Joly</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.25123394654084E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89483181553008E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avenue du Cinq Mars</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square du Cinq Mars</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.23104280759216E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8936946917222E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue de l'Union</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square de l'Union</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22129420304956E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89398879513772E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue de la Justice</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Camélinat</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.21664091907968E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89376530607425E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue du Poirier Fourrier</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jardin pédagogique du Poirier Fourrier</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22868483218992E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89479013683739E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boulevard Jules Ferry</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Jules Ferry</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.26577616418183E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89512750001951E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue Gustave Caillebotte</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Caillebotte</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.23088526146674E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89399462589489E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée Soulezard</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée Soulezard</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22984790477871E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8951870469039E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée de la Haie Normande</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jardin de la Haie Normande</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22103687070292E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89537518118073E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée Beethoven</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jardin des Musiciens</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.21804038833533E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89544201890831E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue de Rethondes</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square de la colombes</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.23155623285438E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89462627717014E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue du Poirier Fourrier</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square de la Rethonde</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.23124603720888E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89472090309261E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée Paul Eluard</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Espace Paul Eluard</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22843698647372E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89549266902789E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue des Provençaux</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jardin des Justes</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.2886422068077E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89525523397053E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boulevard Léon Feix</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jardin de l'Hôtel de Ville</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.24874540210926E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89525523397053E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place Georges Braque</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place Georges Braque</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.24801393188443E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89417775383262E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue du Nord</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piscine Youri Gagarine</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.25410531604742E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89614092751544E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruelle de l'Eglise</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jardin des impressionnistes</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.24566957546179E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89415753774219E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place de Lorraine</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square de Lorraine</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22463505032461E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89352337044295E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boulevard du Général Delambre</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parc des Champioux</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22419124768849E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89380810198189E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boulevard Héloïse</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Espace Jean Vilar</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.2512328601817E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89407582958765E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue du Huit Mai 1945</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jardin des Saints Pères</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.24779773538339E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89402473429899E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue de la Flache</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square de la Flache</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.24332944775163E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89522288475946E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avenue du Parc</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parc Mirabeau</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22802887914079E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89352640987273E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue de la Bérionne</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jardin de la Bérionne</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22088477019472E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89523187343884E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boulevard Héloïse</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parc des Berges</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.25487889038858E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89422594707231E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue des Allobroges</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parc du cerisier</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22089790674634E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.895639964263E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue de Calais</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square des deux Abbés</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.24677892876612E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89426749901526E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue des Figuiers Blancs</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square du Prunet</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.23045841543519E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89433083131475E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rue du Poirier Fourrier</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Poirier Fourrier</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.23045841543519E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89485942602572E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square de Locarno</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Locarno</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.2266436727285E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89460997509991E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boulevard Héloïse</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square du chevalier St George</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.25198125113025E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89420867934186E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Côté des Larris</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.28512287916603E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89512159501136E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mail Stendhal</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mail Stendhal</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22348591695218E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89536521356427E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avenue de l'Espace</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Promenade Verte</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.2569254940622E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89604741244956E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boulevard Héloïse</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Promenade Heloise</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.24783440064034E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89385349268962E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée Romain Rolland</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parc Maurice Audin</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.23163015883898E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89522332400554E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée Henri Wallon</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Henri Wallon</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22326630069343E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89522332400554E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée Henri Wallon</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jardin Henri Wallon</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22476847870439E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8951122902587E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée François Villon</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Espace Villon n°2</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22572693926107E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89540350782567E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée François Villon</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Espace Villon square des quatre tours</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22529329399692E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89546263583233E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place des Vosges</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place des Vosges</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.28873342569732E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89538373090237E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée Ronsard</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dalle Nord Commune de Paris</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22594392043679E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89534320808123E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place d'Alembert</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diderot Nord</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22823804042367E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89540471806066E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+    <ns0:records>
+      <rdf:Description>
+        <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allée Fernand Léger</ns0:address>
+        <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place du Marché</ns0:namePlace>
+        <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22723677205632E0</ns0:xCoordinate>
+        <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89519092564743E1</ns0:yCoordinate>
+      </rdf:Description>
+    </ns0:records>
+
+  </rdf:Description>
+
+</rdf:RDF>
