@@ -10,8 +10,10 @@ Maikel Gali
 - download api.zip and unzip
 - open new terminal
 - go to working directory 
-- ```python FlaskApp.py ```
+- Run ```python FlaskApp.py ```
 - Go to ```http://127.0.0.1:5002/```
-You can now navigate in through the app 
+You can now navigate in through the app. 
+On the home page you can find a map of the city of Argenteuil, FR and the weather forecast for this city.
+You can also access to 
 
 ### Conclusion
