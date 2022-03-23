@@ -6,9 +6,10 @@ Maikel Gali
 
 
 
-### Run the API 
+### Run the application(API)
 - download api.zip and unzip
 - open new terminal
+- if necessery install package (flask, numpy, pickle, json)
 - go to working directory 
 - Run ```python FlaskApp.py ```
 - Go to ```http://127.0.0.1:5002/```
