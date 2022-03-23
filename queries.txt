@@ -1,0 +1,88 @@
+SPARQL Queries
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ns:<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+-List the instance of the geolocated normal parkings
+SELECT ?x
+	WHERE { ?x rdf:type ns:Normal .}
+
+-List the instance of the geolocated two wheeled parkings
+SELECT ?x
+	WHERE { ?x rdf:type ns:TwoWheeler .}
+
+
+-List the instance of the geolocated Squares
+SELECT ?x
+	WHERE { ?x rdf:type ns:Squares .}
+
+  -List the instance of the geolocated Sport fied
+  SELECT ?x
+  	WHERE { ?x rdf:type ns:SportField .}
+
+
+
+-List of all normal Parkings and the city they are in
+SELECT ?x ?City
+	WHERE { ?x rdf:type ns:Normal .
+		?x ns:isIn ?City.
+}
+
+-List of travelers going to Bapaume
+SELECT ?x
+	WHERE {
+		?x ns:isGoingTo ns:Bapaume.
+}
+
+-List of name of travelers older than 30
+SELECT ?name ?age
+WHERE {
+	 ?name rdf:type ns:Travelers .
+	 ?name ns:age ?age .
+	FILTER(?age >=30)
+
+}
+
+
+-Query that contains 2 OPTIONAL graph pattern
+
+SELECT ?name ?isGoingTo ?hasBeenIn
+WHERE { ?x ns:name ?name .
+OPTIONAL { ?x ns:isGoingTo ?isGoingTo}
+OPTIONAL { ?x ns:hasBeenIn ?hasBeenIn }
+}
+
+- A query that contains at least 2 alternatives Query
+
+SELECT ?name ?hasBeenIn ?isGoingTo
+WHERE {
+{ ?name ns:name "Thomas" . ?name ns:hasBeenIn ?hasBeenIn . }
+UNION
+{ ?name ns:name "Marie" .?name ns:isGoingTo ?isGoingTo . }
+}
+
+
+-A query that contains a CONSTRUCT query
+CONSTRUCT { ?x ns:namePlace ?namePlace }
+WHERE {
+	?x ns:namePlace ?namePlace}
+
+-A query that contains a ASK
+ASK {  ?x   ns:name   "Sarah";
+	     ns:age     51
+}
+
+
+-A query that contains a DESCRIBE
+
+DESCRIBE ?x
+WHERE    { ?x ns:age 32 }
+
+
+
+-SWRL Rules
+Travelers(?t)^hasBeenIn(?t,?p)^Place(?p) -> isComingFrom(?t,?p)

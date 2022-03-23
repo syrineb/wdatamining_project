@@ -1,0 +1,526 @@
+@prefix : <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11> .
+
+@prefix org: <https://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf2: <http://www.semanticweb.org/whg04/ontologies/2021/2/comp6214opendata#rdf:> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@base <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11> .
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#hasBeenIn
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#hasBeenIn> rdf:type owl:ObjectProperty ;
+
+                                                                                    rdfs:range <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> ;
+
+                                                                                    rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Travelers> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isComingFrom
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isComingFrom> rdf:type owl:ObjectProperty ;
+
+                                                                                       rdfs:range <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> ;
+
+                                                                                       rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Travelers> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isGoingTo
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isGoingTo> rdf:type owl:ObjectProperty ;
+
+                                                                                    rdfs:range <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> ;
+
+                                                                                    rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Travelers> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> rdf:type owl:ObjectProperty ,
+                                                                                        owl:TransitiveProperty ;
+
+                                                                               rdfs:range <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#City> ;
+
+                                                                               rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> rdf:type owl:DatatypeProperty ;
+
+                                                                                  rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> ;
+
+                                                                                  rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#age
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#age> rdf:type owl:DatatypeProperty ;
+
+                                                                              rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Travelers> ;
+
+                                                                              rdfs:range xsd:int .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#name
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#name> rdf:type owl:DatatypeProperty ;
+
+                                                                               rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Travelers> ;
+
+                                                                               rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#nameCity
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#nameCity> rdf:type owl:DatatypeProperty ;
+
+                                                                                   rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#City> ;
+
+                                                                                   rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> rdf:type owl:DatatypeProperty ;
+
+                                                                                    rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> ;
+
+                                                                                    rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#number
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#number> rdf:type owl:DatatypeProperty ;
+
+                                                                                 rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Parking> ;
+
+                                                                                 rdfs:range xsd:int .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> rdf:type owl:DatatypeProperty ;
+
+                                                                                      rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> ;
+
+                                                                                      rdfs:range xsd:decimal .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> rdf:type owl:DatatypeProperty ;
+
+                                                                                      rdfs:domain <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> ;
+
+                                                                                      rdfs:range xsd:decimal .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#City
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#City> rdf:type owl:Class ;
+
+                                                                               owl:disjointWith <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> ,
+                                                                                                <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Travelers> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Normal
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Normal> rdf:type owl:Class ;
+
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Parking> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#OutdoorSpace
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#OutdoorSpace> rdf:type owl:Class ;
+
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> ;
+
+                                                                                       owl:disjointWith <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Parking> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Parking
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Parking> rdf:type owl:Class ;
+
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place> rdf:type owl:Class ;
+
+                                                                                owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> ;
+                                                                                                      owl:someValuesFrom <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#City>
+                                                                                                    ] ;
+
+                                                                                owl:disjointWith <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Travelers> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#SportField
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#SportField> rdf:type owl:Class ;
+
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#OutdoorSpace> ;
+
+                                                                                     owl:disjointWith <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Square> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Square
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Square> rdf:type owl:Class ;
+
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#OutdoorSpace> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Travelers
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Travelers> rdf:type owl:Class ;
+
+                                                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isGoingTo> ;
+                                                                                                          owl:someValuesFrom <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place>
+                                                                                                        ] ,
+                                                                                                        [ rdf:type owl:Restriction ;
+                                                                                                          owl:onProperty <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#hasBeenIn> ;
+                                                                                                          owl:someValuesFrom <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Place>
+                                                                                                        ] .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TwoWheeler
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TwoWheeler> rdf:type owl:Class ;
+
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Parking> .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#City> ,
+                                                                                              owl:NamedIndividual ;
+
+                                                                                     <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#nameCity> "Argenteuil" .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Bapaume
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Bapaume> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Normal> ,
+                                                                                           owl:NamedIndividual ;
+
+                                                                                  <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.22483113365953 ;
+
+                                                                                  <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#number> 303 ;
+
+                                                                                  <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.953435975441998 ;
+
+                                                                                  <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "place des Canuts" ;
+
+                                                                                  <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "Bapaume" ;
+
+                                                                                  <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Centre_aquatique
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Centre_aquatique> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TwoWheeler> ,
+                                                                                                    owl:NamedIndividual ;
+
+                                                                                           <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#number> 18 ;
+
+                                                                                           <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.25611200399616 ;
+
+                                                                                           <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.962301080941501 ;
+
+                                                                                           <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "RUE DU NORD" ;
+
+                                                                                           <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "Centre aquatique" ;
+
+                                                                                           <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Enghien
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Enghien> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#City> ,
+                                                                                           owl:NamedIndividual ;
+
+                                                                                  <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#nameCity> "Enghien" .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Espace_Paul_Eluard
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Espace_Paul_Eluard> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Square> ,
+                                                                                                      owl:NamedIndividual ;
+
+                                                                                             <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.22848702982919 ;
+
+                                                                                             <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.955307501720696 ;
+
+                                                                                             <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "AllÃ©e Paul Eluard" ;
+
+                                                                                             <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "Espace Paul Eluard" ;
+
+                                                                                             <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Europe
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Europe> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Normal> ,
+                                                                                          owl:NamedIndividual ;
+
+                                                                                 <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.22595555490064 ;
+
+                                                                                 <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#number> 471 ;
+
+                                                                                 <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.952724539632698 ;
+
+                                                                                 <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "5 Rue de la Berionne" ;
+
+                                                                                 <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "Europe" ;
+
+                                                                                 <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Figuier_Blanc
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Figuier_Blanc> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TwoWheeler> ,
+                                                                                                 owl:NamedIndividual ;
+
+                                                                                        <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#number> 12 ;
+
+                                                                                        <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.24720245501487 ;
+
+                                                                                        <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.943798419406498 ;
+
+                                                                                        <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "Figuier Blanc" ;
+
+                                                                                        <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "RUE DE L  ABBE FLEURY" ;
+
+                                                                                        <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Jardin_des_Justes
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Jardin_des_Justes> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Square> ,
+                                                                                                     owl:NamedIndividual ;
+
+                                                                                            <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.28790600356744 ;
+
+                                                                                            <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.952245151133802 ;
+
+                                                                                            <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "Jardin des Justes" ;
+
+                                                                                            <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "Rue des ProvenÃ§aux" ;
+
+                                                                                            <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Marie
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Marie> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Travelers> ,
+                                                                                         owl:NamedIndividual ;
+
+                                                                                <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#age> 22 ;
+
+                                                                                <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#name> "Marie" ;
+
+                                                                                <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#hasBeenIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Jardin_des_Justes> ;
+
+                                                                                <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isGoingTo> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TSP_ERNEST_BRAY> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Parc_Mirabeau
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Parc_Mirabeau> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Square> ,
+                                                                                                 owl:NamedIndividual ;
+
+                                                                                        <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.22814431446347 ;
+
+                                                                                        <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.9357558855326 ;
+
+                                                                                        <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "Avenue du Parc" ;
+
+                                                                                        <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "Parc Mirabeau" ;
+
+                                                                                        <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Provence
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Provence> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Normal> ,
+                                                                                            owl:NamedIndividual ;
+
+                                                                                   <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#number> 145 ;
+
+                                                                                   <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.23123668218402 ;
+
+                                                                                   <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.954372008382997 ;
+
+                                                                                   <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "5 place de la Comune de Paris" ;
+
+                                                                                   <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "Provence" ;
+
+                                                                                   <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Stade_du_Marais
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Stade_du_Marais> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TwoWheeler> ,
+                                                                                                   owl:NamedIndividual ;
+
+                                                                                          <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.2282394693447 ;
+
+                                                                                          <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.936030715801898 ;
+
+                                                                                          <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#number> 6 ;
+
+                                                                                          <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "AVENUE DU PARC" ;
+
+                                                                                          <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "STADE DU MARAIS" ;
+
+                                                                                          <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TSP_ERNEST_BRAY
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TSP_ERNEST_BRAY> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#SportField> ,
+                                                                                                   owl:NamedIndividual ;
+
+                                                                                          <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.24964818034482 ;
+
+                                                                                          <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.941979120610902 ;
+
+                                                                                          <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "2-4 RUE ERNEST BRAY" ;
+
+                                                                                          <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "TSP ERNEST BRAY" ;
+
+                                                                                          <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TSP_HENRI_WALLON_1
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TSP_HENRI_WALLON_1> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#SportField> ,
+                                                                                                      owl:NamedIndividual ;
+
+                                                                                             <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.22494596799725 ;
+
+                                                                                             <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.951267803072398 ;
+
+                                                                                             <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "TSP HENRI WALLON 1" ;
+
+                                                                                             <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "ALLEE HENRI WALLON" ;
+
+                                                                                             <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TSP_PARC_DES_BERGES
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TSP_PARC_DES_BERGES> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#SportField> ,
+                                                                                                       owl:NamedIndividual ;
+
+                                                                                              <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#xCoordinate> 2.25475240689088 ;
+
+                                                                                              <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#yCoordinate> 48.941831097947301 ;
+
+                                                                                              <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#address> "BOULEVARD HELOISE" ;
+
+                                                                                              <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#namePlace> "TSP PARC DES BERGES" ;
+
+                                                                                              <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Argenteuil> .
+
+
+
+###  http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Thomas
+
+<http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Thomas> rdf:type <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Travelers> ,
+                                                                                          owl:NamedIndividual ;
+
+                                                                                 <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#age> 18 ;
+
+                                                                                 <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#name> "Thomas" ;
+
+                                                                                 <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#hasBeenIn> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#Parc_Mirabeau> ,
+                                                                                                                                                                     <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TSP_ERNEST_BRAY> ;
+
+                                                                                 <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#isGoingTo> <http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#TSP_HENRI_WALLON_1> .
+
+
+
+
+###  Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net

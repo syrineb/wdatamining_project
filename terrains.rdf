@@ -1,113 +1,115 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:ns0="http://www.semanticweb.org/syrin/ontologies/2022/2/untitled-ontology-11#">
 
-
-      <rdf:Description rdf:nodeID="genid1">
+  <rdf:Description rdf:nodeID="genid1">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAIL STENDHAL</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provence</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22382715673505E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89536915017711E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-
-      <rdf:Description rdf:nodeID="genid2">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALLEE HENRI WALLON</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSP HENRI WALLON 1</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22494596799725E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89512678030724E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-
-      <rdf:Description rdf:nodeID="genid3">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALLEE HENRI WALLON</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSP HENRI WALLON 2</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22463562611773E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89508142884649E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-
-      <rdf:Description rdf:nodeID="genid4">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25 BOULEVARD YOURI GAGARINE</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSP MARTIN LUTHER KING</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.25245896215643E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89611470954174E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-
-      <rdf:Description rdf:nodeID="genid5">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOULEVARD HELOISE</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSP PARC DES BERGES</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.25475240689088E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89418310979473E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-
-      <rdf:Description rdf:nodeID="genid6">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-4  RUE ERNEST BRAY</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSP ERNEST BRAY</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.24964818034482E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89419791206109E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-
-      <rdf:Description rdf:nodeID="genid7">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RUE DE LA BERIONNE</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSP JARDIN DE LA BERIONNE</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22154369767333E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.8952089619223E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-
-      <rdf:Description rdf:nodeID="genid8">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALLEE GUY DE MAUPASSANT</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSP JARDIN DE LA HAIE NORMANDE</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.2212776885514E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89535977094595E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-
-      <rdf:Description rdf:nodeID="genid9">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6 ALLEE ROMAIN ROLLAND</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSP PARC MAURICE AUDIN</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.23143927833175E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89529832668854E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-      <rdf:Description rdf:nodeID="genid10">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLACE DENIS DIDEROT</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSP PLACETTE DIDEROT</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22673298928687E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89537780275853E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-
-      <rdf:Description rdf:nodeID="genid11">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALLEE PAUL ELUARD</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSP PLACETTE PAUL ELUARD</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.22948512458518E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89550900739453E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-
-      <rdf:Description rdf:nodeID="genid12">
+    <ns0:records>
+      <rdf:Description>
         <ns0:address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 RUE DE RETHONDES</ns0:address>
         <ns0:namePlace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSP SQUARE DE LA COLOMBES</ns0:namePlace>
         <ns0:xCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.23125888045303E0</ns0:xCoordinate>
         <ns0:yCoordinate rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.89465125791626E1</ns0:yCoordinate>
       </rdf:Description>
+    </ns0:records>
 
-
-
+  </rdf:Description>
 
 </rdf:RDF>

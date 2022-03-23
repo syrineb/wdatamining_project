@@ -109,6 +109,9 @@
         <NamedIndividual IRI="#Provence"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Sarah"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Stade_du_Marais"/>
     </Declaration>
     <Declaration>
@@ -122,6 +125,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Thomas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Yohann"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Place"/>
@@ -233,6 +239,10 @@
         <NamedIndividual IRI="#Provence"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Travelers"/>
+        <NamedIndividual IRI="#Sarah"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#TwoWheeler"/>
         <NamedIndividual IRI="#Stade_du_Marais"/>
     </ClassAssertion>
@@ -251,6 +261,10 @@
     <ClassAssertion>
         <Class IRI="#Travelers"/>
         <NamedIndividual IRI="#Thomas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Travelers"/>
+        <NamedIndividual IRI="#Yohann"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isIn"/>
@@ -283,11 +297,6 @@
         <NamedIndividual IRI="#Argenteuil"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasBeenIn"/>
-        <NamedIndividual IRI="#Marie"/>
-        <NamedIndividual IRI="#Jardin_des_Justes"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isGoingTo"/>
         <NamedIndividual IRI="#Marie"/>
         <NamedIndividual IRI="#TSP_ERNEST_BRAY"/>
@@ -301,6 +310,16 @@
         <ObjectProperty IRI="#isIn"/>
         <NamedIndividual IRI="#Provence"/>
         <NamedIndividual IRI="#Argenteuil"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBeenIn"/>
+        <NamedIndividual IRI="#Sarah"/>
+        <NamedIndividual IRI="#Provence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isGoingTo"/>
+        <NamedIndividual IRI="#Sarah"/>
+        <NamedIndividual IRI="#Espace_Paul_Eluard"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isIn"/>
@@ -333,9 +352,14 @@
         <NamedIndividual IRI="#TSP_ERNEST_BRAY"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBeenIn"/>
+        <NamedIndividual IRI="#Yohann"/>
+        <NamedIndividual IRI="#Parc_Mirabeau"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#isGoingTo"/>
-        <NamedIndividual IRI="#Thomas"/>
-        <NamedIndividual IRI="#TSP_HENRI_WALLON_1"/>
+        <NamedIndividual IRI="#Yohann"/>
+        <NamedIndividual IRI="#Bapaume"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#nameCity"/>
@@ -543,6 +567,16 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">48.954372008382997</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Sarah"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">32</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Sarah"/>
+        <Literal>Sarah</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#address"/>
         <NamedIndividual IRI="#Stade_du_Marais"/>
         <Literal>AVENUE DU PARC</Literal>
@@ -636,6 +670,16 @@
         <DataProperty IRI="#name"/>
         <NamedIndividual IRI="#Thomas"/>
         <Literal>Thomas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#age"/>
+        <NamedIndividual IRI="#Yohann"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">58</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Yohann"/>
+        <Literal>Yohann</Literal>
     </DataPropertyAssertion>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#isIn"/>
