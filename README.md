@@ -16,5 +16,3 @@ Maikel Gali
 You can now navigate in through the app. 
 On the home page you can find a map of the city of Argenteuil, FR and the weather forecast for this city.
 You can also access to 
-
-### Conclusion
